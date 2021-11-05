@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B58E9D7-E2E3-4425-A6DB-2BC45F148DCE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MorsEmail</RootNamespace>
+    <AssemblyName>MorsEmail</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\MessageViewer.cs" />
+    <Compile Include="Datastructures\Algorithms\InsertionSort.cs" />
+    <Compile Include="Datastructures\LinkedLists\SinglyLinkedList.cs" />
+    <Compile Include="Datastructures\LinkedLists\Node.cs" />
+    <Compile Include="Datastructures\Queue\DynamicQueue.cs" />
+    <Compile Include="Datastructures\Stack\SimpleStack.cs" />
+    <Compile Include="Datastructures\Trees\TreeNode.cs" />
+    <Compile Include="Controls\BaseModel\Account.cs" />
+    <Compile Include="Controls\BaseModel\AccountRepo.cs" />
+    <Compile Include="Controls\BaseModel\Datastructure\AccountList.cs" />
+    <Compile Include="Controls\BaseModel\Datastructure\FriendList.cs" />
+    <Compile Include="Controls\Messenger.cs" />
+    <Compile Include="Controls\MorseCrypto.cs" />
+    <Compile Include="Controls\MorsEmailAccounts.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AccountControls\Controls\AddFriendView.cs" />
+    <Compile Include="Views\AccountControls\Controls\Validation\ControlValidation.cs" />
+    <Compile Include="Views\AccountControls\HomeView.cs" />
+    <Compile Include="Views\AccountControls\Controls\InboxView.cs" />
+    <Compile Include="Views\AccountControls\Controls\OutboxView.cs" />
+    <Compile Include="Views\AccountControls\Controls\SendEmailView.cs" />
+    <Compile Include="Views\Init\ExitView.cs" />
+    <Compile Include="Views\Init\HeroView.cs" />
+    <Compile Include="Views\Init\LoginView.cs" />
+    <Compile Include="Views\Init\RegisterView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Validation\Validation.csproj">
+      <Project>{3f941261-8da7-4fa8-8ccd-ff4ae3de4dda}</Project>
+      <Name>Validation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
